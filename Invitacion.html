@@ -3,31 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Importamos estilos de AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Invitación Boda</title>
+    <title>Nuestra Boda</title>
 </head>
 <body>
 
-    <!-- Manchas decorativas -->
-    <div class="mancha mancha-1"></div>
-    <div class="mancha mancha-2"></div>
-
-    <h1 id="titulo" class="typing">NUESTRA BODA CIVIL</h1>
-<div id="manchas-container">
-    <div class="mancha mancha-1"></div>
-    <div class="mancha mancha-2"></div>
-
-        <h2 class="typing">Justavo Peña & Luz Rivera</h2>
-        <p class="typing">TE ESPERAMOS CON MUCHA ILUSIÓN EN ESTE DÍA TAN ESPECIAL</p>
+    <div class="invitacion-container">
+        <!-- Aplicamos animaciones con data-aos -->
+        <h1 data-aos="fade-up" data-aos-duration="1000">NUESTRA BODA CIVIL</h1>
+        <h2 data-aos="fade-up" data-aos-delay="500">Justavo Peña & Luz Rivera</h2>
         
-        <div class="fecha">
-            <p>JULIO 31</p>
-            <p>16:00 - 21:00</p>
+        <div class="info" data-aos="zoom-in" data-aos-delay="1000">
+            <p>TE ESPERAMOS CON MUCHA ILUSIÓN</p>
+            <p>JULIO 31 | 16:00 - 21:00</p>
+            <p>JARDIN DE EVENTOS "CAMPERO"</p>
         </div>
-        
-        <p>JARDIN DE EVENTOS "CAMPERO"</p>
-        <button class="boton-confirmar">CONFIRMA TU ASISTENCIA</button>
+
+        <button class="boton-confirmar" data-aos="flip-up" data-aos-delay="1500">
+            CONFIRMA TU ASISTENCIA
+        </button>
     </div>
 
+    <!-- Importamos script de AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
