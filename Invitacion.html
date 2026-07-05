@@ -2,34 +2,32 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Importamos estilos de AOS -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Nuestra Boda</title>
+    <title>Boda Justavo & Luz</title>
 </head>
 <body>
-
-    <div class="invitacion-container">
-        <!-- Aplicamos animaciones con data-aos -->
-        <h1 data-aos="fade-up" data-aos-duration="1000">NUESTRA BODA CIVIL</h1>
-        <h2 data-aos="fade-up" data-aos-delay="500">Justavo Peña & Luz Rivera</h2>
+    <div class="invitacion-container" data-aos="fade-in" data-aos-duration="2000">
+        <p class="subtitulo">NUESTRA BODA CIVIL</p>
+        <h1 class="nombres">Justavo Peña<br>&<br>Luz Rivera</h1>
+        <p class="frase">TE ESPERAMOS CON MUCHA ILUSIÓN<br>EN ESTE DÍA TAN ESPECIAL</p>
         
-        <div class="info" data-aos="zoom-in" data-aos-delay="1000">
-            <p>TE ESPERAMOS CON MUCHA ILUSIÓN</p>
-            <p>JULIO 31 | 16:00 - 21:00</p>
-            <p>JARDIN DE EVENTOS "CAMPERO"</p>
+        <div class="fecha-box">
+            <span class="mes">JULIO</span>
+            <span class="dia">31</span>
+            <span class="hora">16:00 - 21:00</span>
         </div>
 
-        <button class="boton-confirmar" data-aos="flip-up" data-aos-delay="1500">
-            CONFIRMA TU ASISTENCIA
-        </button>
+        <div class="lugar-box">
+            <p>JARDIN DE EVENTOS<br>"CAMPERO"</p>
+        </div>
+
+        <p class="cierre">Te esperamos</p>
+        <a href="#" class="boton-confirmar">CONFIRMA TU ASISTENCIA</a>
     </div>
 
-    <!-- Importamos script de AOS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    <script>AOS.init();</script>
 </body>
 </html>
