@@ -1,33 +1,47 @@
+:root {
+    --verde-suave: #a3b8a8;
+    --verde-oscuro: #5a705e;
+    --crema: #f9f7f2;
+}
+
 body {
-    margin: 0;
-    min-height: 100vh;
+    background-color: var(--crema);
+    background-image: radial-gradient(circle at 10% 20%, var(--verde-suave) 0%, transparent 40%),
+                      radial-gradient(circle at 90% 80%, var(--verde-suave) 0%, transparent 40%);
+    font-family: 'Playfair Display', serif;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: #fdfdfd;
-    font-family: 'Segoe UI', sans-serif;
+    padding: 20px;
 }
 
 .invitacion-container {
+    max-width: 500px;
     text-align: center;
+    background: rgba(255, 255, 255, 0.5);
     padding: 40px;
-    background: radial-gradient(circle, #e8f5e9 0%, transparent 70%);
+    border: 1px solid #dcdcdc;
 }
 
-h1 { color: #2d5a27; }
-h2 { color: #4a7c44; }
+.nombres {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: var(--verde-oscuro);
+    margin: 20px 0;
+}
+
+.fecha-box { font-size: 1.5rem; color: var(--verde-oscuro); border-bottom: 1px solid var(--verde-oscuro); display: inline-block; padding: 10px; }
+
+.lugar-box { 
+    background-color: var(--verde-suave); 
+    color: white; 
+    padding: 15px; 
+    border-radius: 10px; 
+    margin: 20px 0;
+}
 
 .boton-confirmar {
-    padding: 15px 30px;
-    background-color: #78a383;
-    color: white;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: transform 0.3s;
-}
-
-.boton-confirmar:hover {
-    transform: scale(1.1);
+    display: block;
+    margin-top: 20px;
+    color: var(--verde-oscuro);
+    text-decoration: underline;
 }
