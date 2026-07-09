@@ -8,7 +8,7 @@ function crearPetalo() {
     // Selección aleatoria
     const img = imagenes[Math.floor(Math.random() * imagenes.length)];
     const pos = Math.random() * 100;
-    const duracion = Math.random() * 8 + 7; // Entre 7 y 15 seg
+    const duracion = Math.random() * 5 + 6; // Entre 7 y 15 seg
     const tamano = Math.random() * 20 + 20;
 
     petalo.style.left = `${pos}%`;
@@ -22,4 +22,4 @@ function crearPetalo() {
     setTimeout(() => { petalo.remove(); }, duracion * 1000);
 }
 
-setInterval(crearPetalo, 1200); // Frecuencia de pétalos
+setInterval(crearPetalo, 1700); // Frecuencia de pétalos
