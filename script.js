@@ -1,5 +1,5 @@
 const container = document.getElementById('petalos-container');
-const imagenes = ['Petalo_1.png', 'Petalo_2.png', 'Petalo_3.png', 'Petalo_4.png', 'Petalo_5.png', 'Petalo_6.png'];
+const imagenes = ['Petalo_1.png', 'Petalo_2.png', 'Petalo_3.png', 'Petalo_4.png', 'Petalo_5.png'];
 
 function crearPetalo() {
     const petalo = document.createElement('div');
@@ -22,4 +22,4 @@ function crearPetalo() {
     setTimeout(() => { petalo.remove(); }, duracion * 1000);
 }
 
-setInterval(crearPetalo, 1700); // Frecuencia de pétalos
+setInterval(crearPetalo, 1900); // Frecuencia de pétalos
