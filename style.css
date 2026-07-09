@@ -1,71 +1,44 @@
 :root {
     --verde-suave: #a3b8a8;
     --verde-oscuro: #5a705e;
-    --crema: #f9f7f2;
+    --fondo-invitacion: #F7FFE5;
 }
 
 body {
-    background-color: var(--crema);
-    background-image: radial-gradient(circle at 10% 20%, var(--verde-suave) 0%, transparent 40%),
-                      radial-gradient(circle at 90% 80%, var(--verde-suave) 0%, transparent 40%);
+    background-color: var(--fondo-invitacion);
+    background-image: radial-gradient(circle at 10% 20%, #d4e6d4 0%, transparent 40%),
+                      radial-gradient(circle at 90% 80%, #d4e6d4 0%, transparent 40%);
     font-family: 'Playfair Display', serif;
     display: flex;
     justify-content: center;
-    padding: 20px;
+    align-items: center;
+    min-height: 100vh;
+    padding: 10px;
+    margin: 0;
 }
 
 .invitacion-container {
-    max-width: 500px;
+    max-width: 90%;
+    width: 400px;
     text-align: center;
-    background: rgba(255, 255, 255, 0.5);
-    padding: 40px;
-    border: 1px solid #dcdcdc;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-.nombres {
-    font-family: 'Dancing Script', cursive;
-    font-size: 3rem;
-    color: var(--verde-oscuro);
-    margin: 20px 0;
-}
+.nombres { font-family: 'Dancing Script', cursive; font-size: 2.5rem; color: var(--verde-oscuro); margin: 15px 0; }
+.fecha-box { font-size: 1.2rem; color: var(--verde-oscuro); padding: 10px; border-bottom: 1px solid var(--verde-oscuro); display: inline-block; }
+.lugar-box { background-color: var(--verde-suave); color: white; padding: 15px; border-radius: 10px; margin: 20px 0; }
+.boton-confirmar { display: block; margin-top: 20px; color: var(--verde-oscuro); font-weight: bold; text-decoration: underline; }
 
-.fecha-box { font-size: 1.5rem; color: var(--verde-oscuro); border-bottom: 1px solid var(--verde-oscuro); display: inline-block; padding: 10px; }
-
-.lugar-box { 
-    background-color: var(--verde-suave); 
-    color: white; 
-    padding: 15px; 
-    border-radius: 10px; 
-    margin: 20px 0;
-}
-
-.boton-confirmar {
-    display: block;
-    margin-top: 20px;
-    color: var(--verde-oscuro);
-    text-decoration: underline;
-}
-
-.petalos-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.petalo {
-    position: absolute;
-    background-size: contain;
-    background-repeat: no-repeat;
-    animation: caer linear forwards;
-}
+/* Pétalos */
+.petalos-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; overflow: hidden; }
+.petalo { position: absolute; background-size: contain; background-repeat: no-repeat; animation: caer linear forwards; will-change: transform; }
 
 @keyframes caer {
     0% { transform: translateY(-50px) rotate(0deg); opacity: 0; }
     10% { opacity: 1; }
-    90% { opacity: 1; }
-    100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+    100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
 }
