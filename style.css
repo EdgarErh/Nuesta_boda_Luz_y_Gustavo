@@ -42,3 +42,39 @@ body {
     10% { opacity: 1; }
     100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
 }
+
+/* Efecto de escritura a mano */
+.escritura {
+    display: inline-block;
+    /* Inicia totalmente oculto hacia la izquierda */
+    clip-path: inset(0 100% 0 0);
+    -webkit-clip-path: inset(0 100% 0 0);
+    /* Animación fluida (ease-in-out) en lugar de saltos (steps) */
+    animation: escribir-mano 1.5s ease-in-out forwards;
+}
+
+/* Tiempos de entrada para cada línea */
+.linea-1 {
+    animation-delay: 0.5s; /* Empieza casi al abrir la página */
+}
+
+.linea-2 {
+    animation-delay: 2.0s; 
+    animation-duration: 0.8s; /* El "&" se escribe más rápido */
+}
+
+.linea-3 {
+    animation-delay: 2.8s; /* Inicia después de que termina el "&" */
+}
+
+/* La animación que revela el texto */
+@keyframes escribir-mano {
+    0% {
+        clip-path: inset(0 100% 0 0);
+        -webkit-clip-path: inset(0 100% 0 0);
+    }
+    100% {
+        clip-path: inset(0 0 0 0);
+        -webkit-clip-path: inset(0 0 0 0);
+    }
+}
