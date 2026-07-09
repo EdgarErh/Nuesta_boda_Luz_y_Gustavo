@@ -1,42 +1,25 @@
 const container = document.getElementById('petalos-container');
-const petaloImg = 'petalo.png'; // Asegúrate de que este archivo esté en tu carpeta
+const imagenes = ['Petalo_1.png', 'Petalo_2.png', 'Petalo_3.png', 'Petalo_4.png', 'Petalo_5.png', 'Petalo_6.png'];
 
 function crearPetalo() {
     const petalo = document.createElement('div');
     petalo.className = 'petalo';
     
-    const posInicial = Math.random() * 100;
-    const duracion = Math.random() * 4 + 4;
+    // Selección aleatoria
+    const img = imagenes[Math.floor(Math.random() * imagenes.length)];
+    const pos = Math.random() * 100;
+    const duracion = Math.random() * 8 + 7; // Entre 7 y 15 seg
     const tamano = Math.random() * 20 + 20;
 
-    petalo.style.left = `${posInicial}%`;
+    petalo.style.left = `${pos}%`;
     petalo.style.animationDuration = `${duracion}s`;
     petalo.style.width = `${tamano}px`;
     petalo.style.height = `${tamano}px`;
-    petalo.style.backgroundImage = `url('${petaloImg}')`;
+    petalo.style.backgroundImage = `url('${img}')`;
+    petalo.style.transform = `rotate(${Math.random() * 360}deg)`;
 
     container.appendChild(petalo);
-
-    setTimeout(() => {
-        petalo.remove();
-    }, duracion * 1000);
+    setTimeout(() => { petalo.remove(); }, duracion * 1000);
 }
 
-setInterval(crearPetalo, 800);
-
-document.addEventListener("DOMContentLoaded", () => {
-    // 1. Efecto de aparición secuencial para las manchas
-    const manchas = document.querySelectorAll('.mancha');
-    manchas.forEach((mancha, index) => {
-        setTimeout(() => {
-            mancha.style.opacity = "0.8";
-            mancha.style.transform = "scale(1)";
-        }, 500 * (index + 1));
-    });
-
-    // 2. Control dinámico del efecto de máquina de escribir
-    const titulo = document.getElementById('titulo');
-    setTimeout(() => {
-        titulo.style.borderRight = "none"; // Quita el cursor al terminar
-    }, 3500); // El tiempo coincide con la animación CSS
-});
+setInterval(crearPetalo, 1200); // Frecuencia de pétalos
