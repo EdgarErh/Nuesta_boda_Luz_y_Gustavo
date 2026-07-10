@@ -78,3 +78,17 @@ body {
         -webkit-clip-path: inset(0 0 0 0);
     }
 }
+
+/* Estilos para el enlace de la ubicación */
+.enlace-mapa {
+    color: white; /* Mantiene el texto en blanco */
+    text-decoration: none; /* Quita la línea de subrayado azul */
+    display: block; /* Hace que toda el área sea "clickeable", no solo el texto */
+}
+
+.texto-direccion {
+    font-size: 0.85rem; /* Letra un poco más pequeña para no robar protagonismo */
+    margin-top: 10px;
+    font-family: 'Segoe UI', Arial, sans-serif; /* Una fuente más limpia para leer direcciones */
+    opacity: 0.9; /* Un toque de transparencia sutil */
+}
