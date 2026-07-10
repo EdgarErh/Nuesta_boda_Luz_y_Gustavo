@@ -22,4 +22,4 @@ function crearPetalo() {
     setTimeout(() => { petalo.remove(); }, duracion * 1000);
 }
 
-setInterval(crearPetalo, 2500); // Frecuencia de pétalos
+setInterval(crearPetalo, 500); // Frecuencia de pétalos
